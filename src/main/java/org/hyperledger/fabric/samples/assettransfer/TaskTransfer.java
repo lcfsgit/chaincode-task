@@ -25,6 +25,7 @@ import org.hyperledger.fabric.shim.ledger.KeyValue;
 import org.hyperledger.fabric.shim.ledger.QueryResultsIterator;
 
 import com.owlike.genson.Genson;
+import org.json.JSONObject;
 
 @Contract(
         name = "task",
@@ -57,12 +58,12 @@ public final class TaskTransfer implements ContractInterface {
     @Transaction(intent = Transaction.TYPE.SUBMIT)
     public void InitLedger(final Context ctx) {
         ChaincodeStub stub = ctx.getStub();
-        Map<String, Object> detail1 = new HashMap<>();
+        JSONObject detail1 = new JSONObject();
         detail1.put("content", "我需要买感冒药和消炎药,送到普陀区1290号");
         detail1.put("money", "20元");
         detail1.put("deadline", "2023-8-24 12:00:05");
         detail1.put("area", "上海普陀区");
-        Map<String, Object> detail2 = new HashMap<>();
+        JSONObject detail2 = new JSONObject();
         detail2.put("content", "打车，从静安大悦城到华东师范大学，两个人，无行李");
         detail2.put("money", "50元");
         detail2.put("deadline", "2023-8-25 11:00:05");
