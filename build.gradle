@@ -22,7 +22,6 @@ dependencies {
     testImplementation 'org.assertj:assertj-core:3.11.1'
     testImplementation 'org.mockito:mockito-core:2.+'
     // https://mvnrepository.com/artifact/com.alibaba.fastjson2/fastjson2
-    implementation 'com.alibaba.fastjson2:fastjson2:2.0.26'
 
 }
 

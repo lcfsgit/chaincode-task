@@ -8,7 +8,6 @@ package org.hyperledger.fabric.samples.assettransfer;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.alibaba.fastjson2.JSONObject;
 import org.hyperledger.fabric.contract.Context;
 import org.hyperledger.fabric.contract.ContractInterface;
 import org.hyperledger.fabric.contract.annotation.Contact;
@@ -22,7 +21,7 @@ import org.hyperledger.fabric.shim.ChaincodeStub;
 import org.hyperledger.fabric.shim.ledger.KeyValue;
 import org.hyperledger.fabric.shim.ledger.QueryResultsIterator;
 import com.owlike.genson.Genson;
-
+import org.json.JSONObject;
 
 
 @Contract(
